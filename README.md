@@ -1,1 +1,1 @@
-# post-blog-nodejs
+# Event Management with Nodejs + MongoDB
