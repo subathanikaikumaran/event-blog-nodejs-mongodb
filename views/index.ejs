@@ -1,1 +1,30 @@
-<h1>hi</h1>
+<div class="author">
+    <h2 class="author__heading">Willkommen <span class="ger-eng">|</span> Welcome</h2>
+    <p class="author__body"> Planen Sie einen Umzug nach Deutschland? Sind Sie neu in Deutschland? Oder suchen Sie einen Job in Deutschland? <span class="ger-eng">|</span> Are you planning to move to Germany? Are you new in Germany? Or are you looking for a job in Germany?</p>
+  </div>
+  
+  <img src="/img/berlin.webp" alt="person looking out through window" class="my-logo-image" width="981" height="528">
+  
+  <section class="articles">
+    <h2 class="articles__heading">Letzte Veranstaltungen <span class="ger-eng">|</span> Latest Events</h2>
+  
+    <ul class="article-ul">
+      <% data.forEach(event => { %>
+        <li>
+          <a href="/event/<%= event._id %>">
+            <span><%= event.title %></span>
+            <span class="article-list__date"><%= event.createdAt.toDateString() %></span>
+          </a>
+        </li>
+      <% }) %>
+    </ul>
+  
+    <% if (nextPage !== null) { %>
+        <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Events</a> 
+    <% } %>
+    
+    
+  
+  
+  
+  </section>

@@ -1,0 +1,30 @@
+<a href="/dashboard">&larr; Back</a>
+<div class="admin-title">
+  <h2>View / Edit Event</h2>
+
+  <form action="/delete-event/<%= data._id %>?_method=DELETE" method="POST">
+    <input type="submit" value="Delete" class="btn-delete btn">
+  </form>
+
+</div>
+
+<form action="/edit-event/<%= data._id %>?_method=PUT" method="POST">
+
+  <label for="title"><b>Title</b></label>
+  <input type="text" placeholder="Event Title" name="title" value="<%= data.title %>">
+
+  <label for="edate"><b>Event Date</b></label>
+  <input type="text" placeholder="Event Date" name="event_date" value="<%= data.eventDate %>">
+
+  <label for="sponser"><b>Event Sponser</b></label>
+  <input type="text" placeholder="Event Sponser" name="sponser" value="<%= data.sponser %>">
+
+  <label for="refer_url"><b>Reference URL</b></label>
+  <input type="text" placeholder="Event Reference URL" name="refer_url" value="<%= data.referUrl %>">
+
+  <label for="content"><b>Content</b></label>
+  <textarea name="content" cols="50" rows="10"><%= data.body %></textarea>
+
+  <input type="submit" value="Update" class="btn">
+
+</form>
